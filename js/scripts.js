@@ -21,6 +21,16 @@ function  getScrollParams() {
     }
 }
 
+function getRespNavParams() {
+    documentScroll = $(document).scrollTop();
+    respScrollTop = $(".resp_nav_stick_wrapp").offset().top;
+    if(documentScroll >= respScrollTop) {
+        $(".resp_nav_stick_wrapp").addClass("fixed");
+    } else {
+        $(".resp_nav_stick_wrapp").removeClass("fixed");
+    }
+}
+
 var w = window,
 d = document,
 e = d.documentElement,
@@ -30,14 +40,17 @@ bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 $(window).resize(function() {
 bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 // getScrollParams();
+getRespNavParams();
 });
 
 $(document).scroll(function() {
 // getScrollParams();
+    getRespNavParams();
 });
 
 $(document).ready(function() {
     // getScrollParams();
+    getRespNavParams();
 
     if( $(".slider").length > 0 ) {
         $(".slider").not(".slick-initialized").slick({
@@ -120,23 +133,29 @@ $(document).ready(function() {
 
     // --------------
 
-    $(".respmenubtn").click(function(e) {
+    $(".resp_btn").click(function(e) {
       e.preventDefault();
-      if( $("#resp_nav").is(":hidden") ) {
-          $("#resp_nav").fadeIn(300);
+      if( $("#respNav").is(":hidden") ) {
+          $("#respNav").fadeIn(300);
           $(this).addClass("active");
       } else {
-          $("#resp_nav").fadeOut(300);
+          $("#respNav").fadeOut(300);
           $(this).removeClass("active");
       }
+    });
+
+    $(".close").click(function(e) {
+        e.preventDefault();
+        $("#respNav").fadeOut(300);
+        $(".resp_btn").removeClass("active");
     });
     
     $(this).keydown(function(eventObject){
         if (eventObject.which == 27 &&
-            $("#resp_nav").is(":visible") &&
+            $("#respNav").is(":visible") &&
             bodyWidth <= 767) {
-                $("#resp_nav").fadeOut(300);
-                $(".respmenubtn").removeClass("active");
+                $("#respNav").fadeOut(300);
+                $(".resp_btn").removeClass("active");
         }
     });
 
