@@ -5,3 +5,5 @@
 # https://maindenis.github.io/baltimir/some_service.html
 # https://maindenis.github.io/baltimir/some_service_2.html
 # https://maindenis.github.io/baltimir/testimonials.html
+# https://maindenis.github.io/baltimir/contacts.html
+# https://maindenis.github.io/baltimir/gallery.html
