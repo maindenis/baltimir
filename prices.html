@@ -8,36 +8,41 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
 	<title></title>
-	<!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
 </head>
 <body>
 	<div class="wrapper">
 	<!-- Header -->		
 	<header class="header">
-		<img class="header_bg" src="img/header_bg.jpg" alt="" />
+		<img class="header_bg" src="img/header_bg.jpg" alt="" loading="lazy" />
+		<img class="header_bg_resp" src="img/header_bg_resp.jpg" alt="" loading="lazy" />
 		<div class="row">
 			<div class="header_site">
 				<div class="left">
 					<div class="logo_wrapp">
 						<a href="#" class="logo">
-							<img src="img/logo.svg" alt="" />
+							<img src="img/logo.svg" alt="" loading="lazy" />
 						</a>
 					</div>
 					<div class="header_descript">
 						<h2>Цены</h2>
 						<p>Честные и прозрачные цены на все услуги. Высокое качество и профессионализм по доступной стоимости. Узнайте больше!</p>
 					</div>
-					<div id="respNav">
-						<ul class="resp_nav">
-							<li><a href="#">о нас</a></li>
-							<li><a href="#">Услуги</a></li>
-							<li><a href="#">Цены</a></li>
-							<li><a href="#">Оборудование</a></li>
-							<li><a href="#">Галерея</a></li>
-							<li><a href="#">Отзывы</a></li>
-							<li><a href="#">Блог</a></li>
-							<li><a href="#">Контакты</a></li>
-						</ul>
+					<div class="respNavWrapp">
+						<div id="respNav">
+							<button type="button" class="close">
+								<svg height="25px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="25px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z" fill="#ffffff"/></svg>
+							</button>
+							<ul class="resp_nav">
+								<li><a href="#">о нас</a></li>
+								<li><a href="#">Услуги</a></li>
+								<li><a href="#">Цены</a></li>
+								<li><a href="#">Оборудование</a></li>
+								<li><a href="#">Галерея</a></li>
+								<li><a href="#">Отзывы</a></li>
+								<li><a href="#">Блог</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="right">
@@ -66,6 +71,30 @@
 		</div>								
 	</header>
 	<!-- /Header -->
+	<!-- Resp Nav -->
+	<div class="respNavWrappMobile"></div>
+	<div class="resp_nav_stick_wrapp">
+		<div class="resp_nav_stick">
+			<div>
+				<div class="resp_btn">
+					<div>
+						<div class="burger">
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+					<div>
+						<p>Menu</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- /Resp Nav -->
 	<!-- Content -->
 	<div class="content">
 	<!-- Section 1 - Prices -->
@@ -288,6 +317,7 @@
 				<div class="right" id="sidebarWrapp">
 					<div class="sidebar" id="sidebar">
 						<a href="https://youtu.be/QMzh4WmGdCw?si=5wgbwFJ9Z8DHKzaN" data-fancybox class="video_box">
+							<h3>See our work in real time</h3>
 							<img src="img/img_09.jpg" alt="" />
 						</a>
 						<div class="grey_box">
@@ -304,7 +334,8 @@
 	<!-- /Content -->
 	<!-- Footer -->
 	<footer class="footer_section">
-		<img class="footer_bg" src="img/footer_bg.jpg" alt="" />
+		<img class="footer_bg" src="img/footer_bg.jpg" alt="" loading="lazy" />
+		<img class="footer_bg_resp" src="img/footer_bg_resp.jpg" alt="" loading="lazy" />
 		<div class="row">
 			<div class="footer_two_cols">
 				<div class="left">
@@ -324,14 +355,15 @@
 								<li><a href="#">Контакты</a></li>
 							</ul>
 							<ul class="soc_list">
-								<li><a href="#"><img src="img/f.svg" alt="" /></a></li>
-								<li><a href="#"><img src="img/t.svg" alt="" /></a></li>
-								<li><a href="#"><img src="img/l.svg" alt="" /></a></li>
-								<li><a href="#"><img src="img/y.svg" alt="" /></a></li>
+								<li><a href="#"><img src="img/f.svg" alt="" loading="lazy" /></a></li>
+								<li><a href="#"><img src="img/t.svg" alt="" loading="lazy" /></a></li>
+								<li><a href="#"><img src="img/l.svg" alt="" loading="lazy" /></a></li>
+								<li><a href="#"><img src="img/y.svg" alt="" loading="lazy" /></a></li>
 							</ul>
 						</div>
 						<div>
 							<div class="contacts_text">
+								<h3>BALTIMIR GROUP OÜ</h3>
 								<p>Адрес: Петербургское шоссе, 53-108</p>
 								<p>EE - 11415 Таллинн, Эстония</p>
 								<br />
@@ -367,6 +399,7 @@
 									</div>
 								</form>
 							</div>
+							<p class="corp">© 2024 Baltimir Group OÜ . All rights reserved. </p>
 						</div>
 					</div>
 				</div>
