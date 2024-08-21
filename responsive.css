@@ -100,7 +100,7 @@
 
 .header {
     min-height: 200px;
-    z-index: 4;
+    z-index: 6;
 }
 
 .header_bg {
