@@ -448,6 +448,7 @@ textarea:focus {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
+    text-transform: uppercase;
     font-variant: all-small-caps;
     border-bottom: 1px solid transparent;
     color: #FFF;
