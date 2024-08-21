@@ -22,6 +22,11 @@ function  getScrollParams() {
 }
 
 function getRespNavParams() {
+    if(bodyWidth <= 768) {
+        $("#respNav").appendTo(".respNavWrappMobile");
+    } else {
+        $("#respNav").appendTo(".respNavWrapp");
+    }
     documentScroll = $(document).scrollTop();
     respScrollTop = $(".resp_nav_stick_wrapp").offset().top;
     if(documentScroll >= respScrollTop) {
