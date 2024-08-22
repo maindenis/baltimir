@@ -68,14 +68,44 @@ $(document).ready(function() {
             slidesToScroll: 1,
             prevArrow: $(".sl_1_prev"),
             nextArrow: $(".sl_1_next"),
-            // centerMode: true,
-            // appendDots: $(".slider_dots"),
-            // appendArrows: $(".slider_arrows"),
             fade: true,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    arrows: false,
+                    fade: false
+                  }
+                }
+              ]
         });
     }
 
     if( $(".slider_2").length > 0 ) {
+
+        $('.slider_2').on('init', function(event, slick, currentSlide, nextSlide){
+            slickDots = $(".resp_dots").find(".slick-dots");
+            counter = 0;
+            slickDots.find("li").removeClass("red");
+            slickDots.find("li").each(function() {
+                if(counter <= slick.currentSlide) {
+                    $(this).addClass("red");
+                }
+                counter++;
+            });
+        });
+        $('.slider_2').on('afterChange', function(event, slick, currentSlide, nextSlide){
+            slickDots = $(".resp_dots").find(".slick-dots");
+            counter = 0;
+            slickDots.find("li").removeClass("red");
+            slickDots.find("li").each(function() {
+                if(counter <= slick.currentSlide) {
+                    $(this).addClass("red");
+                }
+                counter++;
+            });
+        });
+
         $(".slider_2").not(".slick-initialized").slick({
             dots: false,
             arrows: true,
@@ -87,10 +117,17 @@ $(document).ready(function() {
             slidesToScroll: 1,
             prevArrow: $(".sl_2_prev"),
             nextArrow: $(".sl_2_next"),
-            // centerMode: true,
-            // appendDots: $(".slider_dots"),
-            // appendArrows: $(".slider_arrows"),
-            // fade: true,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    dots: true,
+                    appendDots: $(".resp_dots"),
+                    prevArrow: $(".resp_prev"),
+                    nextArrow: $(".resp_next"),
+                  }
+                }
+              ]
         });
     }
 
@@ -129,10 +166,6 @@ $(document).ready(function() {
             slidesToShow: 3,
             slidesToScroll: 1,
             infinite: false
-            // centerMode: true,
-            // appendDots: $(".slider_dots"),
-            // appendArrows: $(".slider_arrows"),
-            // fade: true,
         });
     }
 
